@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokédex com Histórico</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Pokédex de Bolso</h1>
+        
+        <div class="search-container">
+            <input type="text" id="pokemon-input" placeholder="Nome ou ID (ex: pikachu)" autofocus>
+            <button id="search-button">Buscar</button>
+        </div>
+        
+        <div id="pokemon-info" class="pokemon-card">
+            <p>Busque um Pokémon para ver seus dados!</p>
+        </div>
+
+        <!-- Elemento HTML do Histórico -->
+        <div class="history-section">
+            <h2 id="history-title">Histórico da Sessão</h2>
+            <ul id="history-list">
+                <!-- Itens serão inseridos aqui via JS -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>

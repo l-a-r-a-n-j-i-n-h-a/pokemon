@@ -1,0 +1,156 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #383838;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 50px;
+        }
+
+        .container {
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #pokemon-input {
+            flex-grow: 1;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #pokemon-input:focus {
+            border-color: #ff0000;
+        }
+
+        #search-button {
+            padding: 12px 20px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        #search-button:hover {
+            background-color: #cc0000;
+        }
+
+        #search-button:active {
+            transform: scale(0.95);
+        }
+
+        .pokemon-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #fff;
+            min-height: 150px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pokemon-card h2 {
+            text-transform: capitalize;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .pokemon-card img {
+            max-width: 120px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+        }
+
+        .pokemon-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* --- Estilos do Histórico --- */
+        .history-section {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px dashed #ccc;
+            text-align: left;
+        }
+
+        #history-title {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* O elemento HTML solicitado */
+        #history-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        #history-list li {
+            background-color: #fff;
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            border-left: 4px solid #ff0000;
+            cursor: pointer; /* Indica que é clicável */
+            text-transform: capitalize;
+            font-weight: 500;
+            color: #444;
+            transition: all 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #history-list li:hover {
+            background-color: #ffe6e6; /* Leve tom vermelho ao passar o mouse */
+            padding-left: 20px; /* Efeito de movimento */
+        }
+        
+        #history-list li::after {
+            content: '↺';
+            font-size: 1.2em;
+            color: #ff0000;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        #history-list li:hover::after {
+            opacity: 1;
+        }

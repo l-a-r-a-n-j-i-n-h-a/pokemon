@@ -1,0 +1,132 @@
+
+
+body{
+    background-color: #3f3f3f;
+}
+
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+        #pokemon-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .pokemon-card {
+            background-color: lightgray;
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border-radius: 5px;
+        }
+        .pokemon-card:hover {
+            background-color: rgb(156, 156, 156);
+        }
+        #pagination-controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #pokemon-details {
+            border: 2px solid #333;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Container para a área de estatísticas */
+.stats-container {
+    text-align: left; /* Alinha o conteúdo à esquerda */
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo leve para separar do resto */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Linha individual de cada stat */
+.stat-row {
+    display: flex; /* Coloca nome e barra lado a lado */
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* O nome da estatística (ex: HP, Attack) */
+.stat-label {
+    width: 110px; /* Largura fixa para alinhar os textos */
+    font-weight: bold;
+    text-transform: capitalize; /* Primeira letra maiúscula */
+}
+
+/* O "trilho" cinza da barra */
+.progress-bar-bg {
+    flex-grow: 1; /* Ocupa todo o espaço restante */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 18px;
+    overflow: hidden; /* Esconde o que passar das bordas */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2); /* Profundidade */
+}
+
+/* O preenchimento colorido da barra */
+.progress-bar-fill {
+    height: 100%;
+    background-color: #3b4cca; /* Azul Pokémon, ou use outra cor */
+    text-align: right; /* Número à direita */
+    padding-right: 8px;
+    color: white;
+    font-size: 0.75rem;
+    line-height: 18px; /* Centraliza o texto verticalmente */
+    transition: width 0.5s ease-out; /* Animação suave ao carregar */
+}
+
+/* Container do Histórico */
+.history-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.history-section h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+
+/* Lista sem marcadores (bolinhas) */
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 10px;
+}
+
+/* Itens do histórico */
+#history-list li {
+    background-color: #858585;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-transform: capitalize; /* Primeira letra maiúscula */
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+    border: 1px solid #ddd;
+}
+
+#history-list li:hover {
+    background-color: #494949;
+    border-color: #b1b1b1;
+}
